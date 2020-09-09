@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Unicode（UTF-8）</title>
+		<link rel="stylesheet" href="" />
+		<style>
+			*{
+				font-family: "microsoft yahei";
+			}
+			body{
+				position: relative;margin-left: 350px;margin-right: 300px;
+			}
+			#ele2{
+				font-size: 80px;color: blue;
+				display: none;
+				position: relative;top: -80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		都是16进制的<br />
+		Unicode本身只规定了每个字符的数字编号是多少，并没有规定这个编号如何存储。
+		把Unicode编号直接转换成二进制进行存储,除了这种直接转换成二进制的方案外，
+		还有其他方案，主要有UTF-8，UTF-16，UTF-32。
+		（UTF-8、UTF-16、UTF-32……都是 Unicode编码 的一种实现。）
+		</div>
+		
+		<button type="button" onclick="fu1()">js里</button><br />
+		<p id="de1">\u0041（后四位是编码——16进制）</p>
+		<button type="button" onclick="fu2()">网页实现</button>
+		<p id="de2">&#开头;（编码是10进制）</p>
+		<script>
+			console.log("\u0041");
+			function fu1(){
+				document.getElementById("de1").innerHTML=
+				"想要输出Unicode编码，"+"要使用转义字符加上u再加四位编码，如\u0042"
+			}
+			function fu2 () {
+				document.getElementById("de2").innerHTML=
+				"&#9760;";
+				de2.style.color="red";
+				de2.style.fontSize="30px";
+			}
+		</script>
+	<button onclick="change()">点击来回切换</button>
+	<p id="ele1">&#开头;（编码是10进制）</p>
+	<p id="ele2">&#9760;</p>
+	<script>
+		var degree = 0;
+		var ele1 = document.getElementById("ele1");
+		var ele2 = document.getElementById("ele2");
+		function change () {
+			if(degree % 2 == 0){
+				ele1.style.display = "none";
+				ele2.style.display = "block";
+			}else{
+				ele1.style.display = "block";
+				ele2.style.display = "none";
+			}
+			degree++;
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事例-内容来回切换</title>
+	</head>
+	<body>
+		<button onclick="change()">点击切换内容</button>
+<p id="nr1">123</p>
+<p id="nr2" style="display:none">需要改变的内容</p>
+<script>
+   var cheakNum=0;
+   var nr1 = document.getElementById("nr1");
+   var nr2 = document.getElementById("nr2");
+   function change(){
+       if(cheakNum % 2 == 0){
+           nr1.style.display = 'none' ;
+           nr2.style.display = 'block' ;
+       }else{
+           nr2.style.display = 'none' ;
+           nr1.style.display = 'block' ;
+       }
+       cheakNum++;
+   }
+</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for</title>
+		<style>
+			*{
+				font-family: "微软雅黑";
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			//1.打印1-100之间所有奇数之和
+			var acount;
+			for(acount=1;acount<=100;acount++){
+				if(acount%2 != 0){
+					document.write(acount+"<br />");
+				}
+			}
+			//2.打印1-100之间所有7的倍数的整数的个数及总和 
+			var i,sum=0;
+			acount = 0;
+			for(i=1;i<=100;i++){
+				if(i%7 == 0){
+					sum += i;acount++;
+				}
+			}
+			console.log("7倍数的个数 :"+
+			acount+"\r总和:"+sum);
+			//3.水仙花数 	
+			//水仙花数是指一个3位数，它的每个位上的数字的3 次幂之和等于它本身。
+			//例如：1^3 + 5^3+ 3^3 = 153,请打印所有的水仙花数。
+			var sh,g,s,b;
+			for(i=100;i<1000;i++){
+				b = parseInt(i/100);
+//				s = parseInt((i - b*100)/10);
+				s = parseInt(i/10) - b*10; 
+				g = i - b*100 - s*10;
+				if(b*b*b+s*s*s+g*g*g == i){
+					console.log(i);
+				}
+			}
+			//4、99乘法表。
+			var a,b;
+			for(a=1;a<10;a++){
+				for(b=1;b<a+1;b++){
+					document.write(a+"*"+b+"="+a*b+"&nbsp;");
+				}
+				document.write("<br />");
+			}
+		</script>
+	</body>
+</html>

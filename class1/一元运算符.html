@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1</title>
+	</head>
+	<body>
+		<script>
+			var a = 11;
+			/*
+			 * +  正号   不会产生影响
+			 * -  负号   取反
+			 */
+			a = -a;
+			a = true;
+			a = -a;
+			console.log(typeof a);
+			console.log("a = "+a);
+			
+			
+			var re = 1+"2"+3;
+			document.write(typeof re+"<br />");
+			document.write(re+"<br />");
+			
+			re = 1 + +"2" +3;
+			document.write(typeof re+"<br />");
+			document.write(re);
+			
+		</script>
+	</body>
+</html>

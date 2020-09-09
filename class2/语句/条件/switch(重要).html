@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>条件分支语句switch</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 对于成绩大于60分的，输出'合格'。低于60分的，输出'不合格'
+			 */
+			var score = prompt("输入成绩");
+			var a = parseInt(score/10);
+			/*
+			 * 在js里，score/10 得到的结果不是整数，因为/是除以，不是整除！
+			 * parseInt（）函数取整
+			 * 测试：console.log(score/10); 77——7.7
+			 */
+			
+			switch(a){
+				case 10:
+				case 9:
+				case 8:
+				case 7:
+				case 6: 
+					console.log("合格");
+					break;
+				case 5:
+				case 4:
+				case 3:
+				case 2:
+				case 1: 
+					console.log("不合格");
+					break;
+				default:console.log("输入100以内的数字");
+			}
+			/*
+			 * 另一种switch方式，像if-else；（只能在js里使用）
+			 * switch(true){
+				case score>=60&&score<=100:
+					console.log("合格");
+					break;
+				case score<60&&score>=0:
+					console.log("不合格");
+					break;
+				default :
+					console.log("数字不正常");
+			}
+			 */
+			
+		</script>
+	</body>
+</html>

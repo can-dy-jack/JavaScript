@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> ? : </title>
+		<style>
+			*{
+				font-family: "微软雅黑";
+			}
+		</style>
+	</head>
+	<body>
+		<p>三元运算符</p>
+		<script>
+			/*
+			 * 条件表达式?语句:语句  
+			 * 
+			 */
+			var a = 10,b = 20,c;
+//			a>b?alert("a大"):alert("b大");
+			c = a > b ? a : b;
+			console.log(c);
+			
+			var i = 100,j = 20, k = 30,min;
+			min = i > j ? j > k ? k : j : i > k ? k : i;
+//			i > j ?(j > k ? k : j):(i > k ? k : i);不方便阅读
+			document.write(min);
+		</script>
+	</body>
+</html>
