@@ -6,7 +6,33 @@
 	</head>
 	<body>
 		<script>
+			//break and continue可以提升性能（速度）；
 			
+		   //break退出  循环语句  和 switch语句 ；
+		   /*可以为循环语句创建一个label，来标识当前的循环；
+		   如：label:循环语句
+		   这样使用break的时候，在break后面加一个label，可以结束指定循环！
+		   */
+		    outer:
+		    for(var i=0;i<4;i++){
+			   console.log("@外层循环"+i);
+			   for(var j=0;j<2;j++){
+				   break outer;
+				   console.log("@内层循环");
+			   }
+		    }
+		   //continue结束当次循环,也能加label。
+		    console.time("test");
+		    for(var i=0;i<10;i++){
+			   for(var j=0;j<2;j++){
+				   continue;
+				   document.write("@内层循环"+j);
+			   }
+			  document.write("@外层循环"+i);
+		    }
+			console.timeEnd("test");
+			//计时器console.time("计时器名字");
+			//console.timeEnd("计时器名字");结束
 		</script>
 	</body>
 </html>
