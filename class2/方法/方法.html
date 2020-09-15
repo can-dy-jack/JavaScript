@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>方法</title>
+	</head>
+	<body>
+		<script>
+			/*对象的属性值可以是任何数据类型。
+			函数也可以作为对象的属性值；
+			这时这个函数就叫做这个对象的方法；
+			*/
+			var na ={
+				name : "li",
+				number : 1,
+				say(){		//方法
+					console.log("hello");
+				}
+			};
+			na.say();
+			//比如 document.write()就是调用document的write方法！
+			// 函数和方法本质上一样，就是在不同的地方叫不同的名字。
+		</script>
+		<script>	
+		/*枚举 对象里的属性 ：
+		 for(var 变量 in 对象 ){
+			 
+		 }
+		 for .... in 语句 对象里有几个属性，里面的语句就执行几次。
+		 每次执行时，都会将属性名(不是属性值)赋值给var后面的变量。
+		*/
+	    for(var n in na){
+		    //console.log(n);
+			console.log(na[n]); //不能用  . 运算符   ！
+	    }
+		</script>
+	</body>
+</html>

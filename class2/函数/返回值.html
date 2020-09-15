@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>返回值</title>
+	</head>
+	<body>
+		<script>
+			// return 
+			function sum(a,b,c){
+				var d = a+b+c;
+				return d;
+			}
+			var result = sum(2,2,4);
+			console.log("result = "+result);
+			
+			
+			//*实参可以是任何类型的数据类型,也可以是对象或函数！（这里就不举例了）
+			function isou(num){
+				return num % 2 == 0;  //技巧
+			}
+			var a = isou(2);
+			console.log(a);
+			//return结束整个函数——break，continue
+			//特殊：函数内还可以再声明新的函数！
+		</script>
+		
+	</body>
+</html>

@@ -6,8 +6,35 @@
 	</head>
 	<body>
 		<script>
-			/*
+			/*函数 
+				-也是一个对象！
+				函数中可以封装一些功能（代码）；
 			*/
+		    var fun = new Function();// 定义函数方法 1 这里的F要大写！
+		    //可以将要封装代码以字符串的形式传递给 构造函数 ；
+		    console.log(typeof fun);
+		    
+		    function fuc(){			// 定义函数方法 2 这里的f要小写！常用
+			    console.log(typeof fuc);
+		    } 
+		    fuc();
+		</script>
+		<script>
+			/*函数的参数
+			*/
+		    function sum(a,b){  //a,b 为形参
+			    document.write(a+b);
+		    }
+			sum(2,4);  //实参 赋值给 形参；
+			
+	/*
+	调用函数是解析器 不会检查实参的数据类型!
+	调用函数是解析器 也不会检查实参的数量
+		——多余的实参不会被赋值。
+		——如果实参数量少于形参，则没有被赋值的形参的值是undefined，和为NAN；
+	*/
+		   sum(2,4,3);
+		
 		</script>
 	</body>
 </html>
