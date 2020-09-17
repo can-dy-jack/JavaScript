@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组</title>
+	</head>
+	<body>
+		<script>
+		/*内建对象 —— 数组(Array)。
+		与普通对象不同的是，数组用索引（index）(0~...)当做属性名。
+		*/
+	    var arr = new Array();//笨方法向数组添加属性 1
+		
+		arr[0] = 12;
+		arr[7] =  22;
+		console.log(arr[0]);
+	
+		console.log(arr.length);//未设置的数字  默认为null。——尽量不要创建非连续数组。
+		console.log(arr);
+		
+		var arr2 = [];  
+		var arr3 = [1,2,3]; //创建数组方法 2
+		arr2[0] = 1;
+		console.log(arr2[0]);
+		console.log(arr3[2]);
+		
+		var arr4 = new Array(22,33,44); //创建数组方法 3
+		console.log(arr4[2]);
+		
+		/*当创建数组时，只有一个数字：
+			var arr2 = [8];      ——第一个数字是8，只有一个数字。
+			var arr4 = new Array(8);——有8个数字，都是 空的。
+		*/
+	   
+	   //1*数组中不只能放数字，可以放string、对象、函数、数组。。。
+	   //2*数字长度可以任意改变的。
+		</script>
+		</body>
+</html>

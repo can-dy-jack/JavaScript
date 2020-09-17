@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>arguments</title>
+	</head>
+	<body>
+		<p>arguments 参数列表，实参的意思</p>
+		<script>
+			/*
+			调用函数时，浏览器会传递两个隐含参数  
+				this 	函数的上下文对象
+				argument封装实参的对象
+					是一个类 数组对象
+					也可以通过索引来操作数据，也可以获取长度。
+					在调用函数时，我们所传递的实参都会封装在arguments里。
+					实参都会按索引保存在arguments里（从零开始），所以没有形参也能用。
+					
+					有个callee属性，指向当前函数的对象。
+			*/
+			function fun(a){
+				// console.log(arguments instanceof Array);
+				console.log(Array.isArray(arguments));
+				console.log(arguments.length);  //获取实参的长度（数量）
+				// console.log(arguments[0]);
+				// console.log(arguments.callee);
+			}
+			fun(8);
+		</script>
+	</body>
+</html>

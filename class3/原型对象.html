@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原型对象</title>
+	</head>
+	<body>
+		<script>
+			/*原型 prototype
+			每创建一个函数，解析器都会向函数中添加一个属性prototype,
+			这个属性对应（通过地址）着一个对象，这个对象就是原型对象。
+				这个对象是整个函数创建的对象所 共用 的 。
+				
+			如果是普通函数调用prototype没有任何作用。
+			如果是构造函数调用，则创建的每一个对象都会有一个隐含的属性，
+			指向原型对象。只能通过 __proto__ 来访问属性。
+			*/
+		    function Pro(){
+			    // console.log(123);
+		    }
+			var ar = new Pro();
+		    // console.log(Pro.prototype);
+			Pro.prototype.name = "jack";
+			Pro.prototype.sayHello = function (){
+				alert("hello");
+			}
+			// console.log(ar.__proto__);
+			ar.sayHello();
+			//结合构造函数使用更佳。
+		</script>
+		<script>
+			/*
+			用 in 检查 对象里是否有 某个属性（包括原型对象里的）。
+			用 hasOwnProperty();检查对象 自身中 是否含有该属性。
+			*/
+		   //原型也有原型。。。。
+		</script>
+	</body>
+</html>

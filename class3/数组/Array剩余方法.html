@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			8、concat()	 连接两个或更多的数组(元素也可以)，并返回结果。
+				不会对原 两个或多个数组 产生影响。
+			9、join()	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+				将数组转换成字符串。
+				不会对原 数组 产生影响。
+				可以指定一个连接符。ru:console.log(arr.join("-"));默认是逗号；
+			10、reverse()	颠倒数组中元素的顺序。
+				对原数组产生影响。
+			11、sort()	对数组的元素进行排序
+				默认Unicode编码排序,所以数字只会对位排序！
+				比较数字，需要自己制定排序的规则：
+					sort()加一个回调函数，需要两个形参，但是实参可以有多个。
+					浏览器会根据回调函数的返回值排序，
+						返回值大于零则调换元素位置，
+						小于零位置不变，
+						0代表相等 也不换位置。
+				对原数组产生影响。
+			*/
+		    var arr = ["j","a","c","k"];
+		    var arr2 = ["k","a","r","t"];
+		    document.write(arr.concat(arr2,"jim"));
+		   
+		    console.log(arr.join(""));
+		   
+		    arr.reverse();
+		    console.log(arr);
+		    
+		    arr.sort();
+		    console.log(arr);
+		    var ar = [11,5,7,99];
+		    ar.sort(function(a,b){
+			 //    if(a>b){			//升序
+				// 	return 1;
+					
+				// }else if(a<b){
+				// 	return -1;
+				// }else{
+				// 	return 0;
+				// }
+				return a-b;  //升序
+		    })
+			console.log(ar);
+		</script>
+	</body>
+</html>

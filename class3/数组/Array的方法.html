@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>a</title>
+	</head>
+	<body>
+		<script>
+			/*属性
+			1、length——获取数组长度 and 修改数组长度（例如：array.length = 10）
+				技巧：想往数组最后位置添加数字，如：ar[ar.length] =  122;
+			
+			*方法
+			* 1、push()——向数组末尾添加元素，并返回数组长度。
+			* 2、pop() ——删除数组最后一个元素，返回被删除的那个数据。
+			* 
+			* 3、unshift()——向数组开头添加元素，并返回数组长度。
+			* 4、shift() ——删除数组开头一个元素，返回被删除的那个数据。
+			*/
+		    var arr = Array(23,3);
+			var num = arr.push("ni",7);
+			console.log(arr);
+			console.log(num);
+			
+			num = arr.pop();
+			console.log(arr);
+			console.log(num);
+			
+			num = arr.unshift("jack");
+			console.log(arr);
+			console.log(num);
+			
+			num = arr.shift();
+			console.log(arr);
+			console.log(num);
+		</script>
+	</body>
+</html>

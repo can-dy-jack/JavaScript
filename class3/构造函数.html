@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//引入：
+			//使用工厂方式创建对象  ——一次性创建多个对象    ——第3种方法
+			function CreatePerson(name,age) {
+				var obj = Object();
+				obj.name= name,   //注意这里的 ：要换成 = 号！
+				obj.age = age,
+				obj.sayName=function(){
+					alert(this.name);
+				}
+				return obj;
+			};
+			var obj2 = CreatePerson("jack",19);
+			var obj3 = CreatePerson("jac",20);
+			console.log(obj3);
+			//其实就和构造函数差不多~,但是无法区分种类。
+		</script>
+		<script>
+			/*构造函数，
+				定义和普通函数一样，只是首字母习惯大写！
+				构造函数调用要加new关键字，普通函数直接调用。
+			构造函数的执行流程：
+				1、立即创建一个新的对象；
+				2、将新建的对象设置函数的this；
+				3、逐行执行函数中的代码；
+				4、将创建的对象作为返回值返回。
+				
+			同一个构造函数会创建的一类对象，所以也称 构造函数 为 类 。
+			*/
+			function Person(name,age){
+				this.name= name,
+				this.age = age,
+				this.al = function(){ 
+					//把函数主体放在外面，可以减少内存反复调试（同一个函数不同对象反复调用。）
+					//如果放在全局作用域中 ，坏处：污染命名空间，容易出现错误。
+					console.log(this);
+				}
+			}
+			var pa = new Person("er",2);
+			//var pa = Person();
+			pa.al();
+			document.write(pa instanceof Person);//instanceof 检查对象是否为某个类的实例。
+		</script>
+		<!-- ?1.只有console.log才能输出对象的内容而不是[object object] -->
+	</body>
+</html>

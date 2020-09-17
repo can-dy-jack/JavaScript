@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数对象的方法</title>
+	</head>
+	<body>
+		<script>
+				
+			function fun(a,b){
+				// alert(this.name);
+				console.log("a = "+a);
+				console.log("b = "+b);
+			}
+			/*call() 和 apply()都是调用函数
+				都可以将一个对象指定为第一个参数。
+					此时这个对象即为函数执行时的this
+				即用来指定this的。
+			fun.call();
+			fun.apply();
+			fun();
+				指定this的同时还可以传递实参：
+					call() 可以将实参在对象之后一次传递。
+					apply() 需要将实参封装到数组里传递。
+			*/
+		   var obj = {name:"jj",age:12};		//[]数组，{}函数
+		   var obj2 = {
+			   name:"ka",
+			   say:function(){
+				   alert(this.name);
+				   
+			   }
+		   };
+		   // fun();
+		   // fun.call(obj2);
+		   // obj2.say.apply(obj);
+		   
+		   fun.call(obj,2,3);
+		   fun.apply(obj,[3,4]);
+		</script>
+	</body>
+</html>

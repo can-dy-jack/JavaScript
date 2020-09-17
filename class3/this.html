@@ -2,7 +2,52 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>this</title>
+		<script>
+			/*
+			解析器在调用函数时每次都会向函数内部传递一个隐含的参数。
+				这个隐含的参数就是 this 。
+			this:
+				指向的是一个对象（上下文对象）；
+				根据函数的调用方式的不同，this会指向不同的对象。
+				1、以函数形式调用，this永远是window
+				2、以方法形式待用，this是调用方法的对象
+				3、以构造函数方式调用，this新创建的那个对象
+				4、使用call() apply()调用时，this是指定指定的那个对象
+			*/
+		    function fun(){
+				console.log(this);
+			}
+			function fun2(){
+				console.log(this.name);
+			}
+			var obj = {
+				name:"jack",
+				sayName:fun,
+				sayName2:fun2
+			};
+			// console.log();
+			obj.sayName(); 
+			obj.sayName2(); // 等同于console.log(obj.name);
+			
+			// fun();
+			
+			//fun2(); 与
+			//var name = "windows";
+			//fun2(); 不同
+			
+			//this 作用体现：
+			var name = "全局";
+			function fun3(){
+				console.log(this.name); //name —— this.name
+			}
+			var obj2 = {
+				name:"kart",
+				sayName:fun3
+			};
+			fun3();
+			obj2.sayName();
+		</script>
 	</head>
 	<body>
 	</body>
