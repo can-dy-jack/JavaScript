@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM</title>
+		<style>
+			.box{
+				text-align: center;
+			}
+			table td{
+				/* border:2px solid #0000FF; */
+				border-radius: 5px;
+				background-color: antiquewhite;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			/*DOM  文档对象模型
+			节点（Node） ——构成HTML文档的基本的单位
+			*/
+		</script>
+		<div class="box">
+		<table>
+			<tr>
+				<td></td>
+				<td>node Name</td>
+				<td>node Type</td>
+				<td>node Value</td>
+			</tr>
+			<tr>
+				<td>文档节点</td>
+				<td>#document</td>
+				<td>9</td>
+				<td>null</td>
+			</tr>
+			<tr>
+				<td>元素节点</td>
+				<td>标签名</td>
+				<td>1</td>
+				<td>null</td>
+			</tr>
+			<tr>
+				<td>属性节点</td>
+				<td>属性名</td>
+				<td>2</td>
+				<td>属性值</td>
+			</tr>
+			<tr>
+				<td>文本节点</td>
+				<td>#text</td>
+				<td>3</td>
+				<td>文本内容</td>
+			</tr>
+		</table>
+		</div>
+		<button id="bun">按钮</button>
+		<script>
+			/*浏览器已经为我们提供了 文档节点 对象 这个对象是Windows属性
+				可以直接在浏览器中使用，文档节点代表的是整个网页
+			*/
+			//console.log(document);文档节点 : document
+			var bun = document.getElementById("bun");
+			bun.innerHTML = "修改文字";
+		</script>
+	</body>
+</html>

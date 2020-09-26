@@ -2,8 +2,44 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Date</title>
 	</head>
 	<body>
+		<script>
+			/*Date 对象
+				表示时间
+			*/
+		    var d = new Date();//封装的时间是当前代码执行的时间。
+			//如果要指定时间，要给date函数传递一个时间的参数！
+			var d2 = new Date("12/3/2020 19:19:00");//时间格式要正确、完整。月/日/年 时间
+			console.log(d);
+			console.log(d2);
+			
+			/* getDate();获取当前月份中的几号。
+			   getDay();返回当前是周几。特殊：周日是0
+			   getMonth();返回当前月份-1。因为返回的是0-11的数字。
+			更多：   
+			   getFullYear()；获取年份
+			   getYear(); 已弃用
+			   getHours()	返回 Date 对象的小时 (0 ~ 23)。
+			   getMinutes()	返回 Date 对象的分钟 (0 ~ 59)。
+			   getSeconds()	返回 Date 对象的秒数 (0 ~ 59)。
+			   getMilliseconds() 返回 Date 对象的毫秒(0 ~ 999)。
+			   
+			   getTime()返回 1970年1月1日（格林威治标准时间，不是北京时间！）至今的毫秒数（时间戳）。
+					统一单位，计算机好保存，底层普遍运用。
+				Date.now();获取当前的时间戳。——可以用于监测运行时间。
+			*/
+		    var d_1 = d.getDate();
+			console.log(d_1);
+			var d_2 = d2.getDay();
+			console.log(d_2);
+			var d_3 = d.getMonth();
+			console.log(d_3);
+			// var d_4 = d.getMinutes();
+			// console.log(d_4);
+			var d_4 = d.getTime();
+			console.log(d_4);// d_4/1000/60/60/24/365
+		</script>
 	</body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>包装类</title>
+	</head>
+	<body>
+		<script>
+			/*js提供了三个包装类，可以将基本数据类型转换成对象。
+			String();
+			Number();
+			Boolean();
+			*/
+		    var a = 111;
+			console.log(typeof  a);
+			var num = new Number(3);//基本不用基本数据类型的对象。
+									//——但是开发者会用到，比如 b.toString();！——临时使用包装类转换为对象，然后销毁。
+			console.log(typeof num);
+		</script>
+	</body>
+</html>
